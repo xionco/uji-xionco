@@ -1,0 +1,52 @@
+<!-- 
+  cara pakai view image or video pop up
+  - set data-bs-toggle, data-bs-target, data-url di button atau link yang untuk view
+  contoh:
+  <button class="btn btn-primary btn-sm" 
+          data-bs-toggle="modal" 
+          data-bs-target="#mediaModal" 
+          data-url="https://example.com/media/file.jpg">
+    View
+  </button> 
+  - letakkan showfotvidmodal(); di dom
+-->
+
+<div class="modal fade" id="mediaModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="width: auto;">
+    <div class="modal-content bg-transparent border-0 shadow-none">
+      <div class="modal-body d-flex justify-content-center p-0">
+        <div id="mediaContainer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function showfotvidmodal(){
+  const mediaModal = document.getElementById('mediaModal');
+  mediaModal.addEventListener('show.bs.modal', event => {
+    const button = event.relatedTarget;
+    const url = button.getAttribute('data-url');
+    const container = document.getElementById('mediaContainer');
+    container.innerHTML = '';
+
+    if (url.match(/\.(jpeg|jpg|png|gif)$/i)) {
+      const img = document.createElement('img');
+      img.src = url;
+      img.classList.add('img-fluid');
+      img.style.maxWidth = '100%';
+      img.style.height = 'auto';
+      container.appendChild(img);
+    } else if (url.match(/\.(mp4|webm)$/i)) {
+      const video = document.createElement('video');
+      video.controls = true;
+      video.src = url;
+      video.style.maxWidth = '100%';
+      video.style.height = 'auto';
+      container.appendChild(video);
+    } else {
+      container.innerHTML = `<p class="text-muted">Format tidak didukung.</p>`;
+    }
+  });
+}
+</script>

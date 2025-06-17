@@ -1,0 +1,206 @@
+<% var homeopen=""; var adminopen='';var podo='';var upstock='';var forcestatusrequest='';var stockopen='';var stockproduk='';var stockprodukup='';var bank=''; var banklimbo='';var editdatabase='';var pemantauan='';var daftarrequest='';var requsetbeli='';var statistik='';var bankinvestor='';%>
+<% if (navatasactive=='home') { %>
+    <% homeopen='active'; %>
+<% } else if (navatasactive=='supervisor-semuapesanan') { %>
+ 
+    <% adminopen='active'; %>
+    
+<% } else if (navatasactive=='podo') { %>
+    <% podo='active'; %>
+<% } else if (navatasactive=='supervisor-stock') { %>
+    <% upstock='active'; %>
+<% } else if (navatasactive=='supervisor-forcestatus') { %>
+    
+    <% forcestatusrequest='active'; %>
+<% } else if (navatasactive.includes('stock')) { %>
+
+    <% stockopen='active'; %>
+    <% if (navatasactive=='stock-produk') { %>
+        <% stockproduk='active'; %>
+    <% } else if (navatasactive=='stock-produk-up') { %>
+        <% stockprodukup='active'; %>
+    <% } %>
+<% } else if (navatasactive.includes('bank')) { %>
+    <% bank='active'; %>
+    <% if (navatasactive=='finance-banklimbo') { %>
+        <% banklimbo='active'; %>
+    <% } else if (navatasactive=='finance-bankinvestor') { %>
+        <% bankinvestor='active'; %>
+    <% } %>
+<% } else if (navatasactive=='editdatabase') { %>
+    <% editdatabase='active'; %>
+    
+<% } else if (navatasactive=='supervisor-statuspesanan') { %>
+    <% pemantauan='active'; %>
+<% } else if (navatasactive.includes('procurement')) { %>
+
+    <% daftarrequest='active'; %>
+    <% if (navatasactive.includes('daftarrequest')) { %>
+        
+        <% requsetbeli='active'; %>
+    <% } %>
+<% } else if (navatasactive=='statistik') { %>
+    <% statistik='active'; %>
+<% }%>
+<div class="d-flex" >
+    <nav class="sidebar d-flex flex-column flex-shrink-0 position-fixed" id="sidabarutamashow">
+        <!--<button class="toggle-btn" onclick="toggleSidebar()">
+            <i class="fas fa-chevron-left"></i>
+        </button>-->
+        <div class="px-4 pt-4">
+            <h4 class="logo-text mb-0"><i id="klikhidebar" class="bi bi-caret-left-fill toggle-btn" onclick="toggleSidebar()"></i> <span class="logo-text-hide"  onclick="toggleSidebar()"> Sembunyikan Menu</span></h4>
+            <hr style="color: grey;">
+        </div>
+
+        <div class="vh-100" id="scrolled">
+            <div class="col" style="display: flex;flex-direction: column;padding-bottom: 4em;"><!-- display: flex;flex-direction: column; nav flex-column -->
+                <a class="sidebar-link text-decoration-none px-3">
+                    <i class="bi bi-people-fill me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Admin"></i>
+                    <span class="hide-on-collapse">Supervisor</span>
+                </a>
+                <div class="hide-on-collapse-detailmenu px-3">
+                    <hr style="color: grey;">
+                        <div class="row d-none">
+                            <div class="col-8">
+                                <span>Tugas Mendatang</span>
+                            </div>
+                            <div class="col-3" style="text-align: right;">
+                                <span id="tugasmendatang">0</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <span>Tugas Saya</span>
+                            </div>
+                            <div class="col-3" style="text-align: right;">
+                                <span name="totaltugassayaall">0</span>
+                            </div>
+                        </div>
+                    <hr style="color: grey;margin-bottom: 0;">
+                </div>
+                <br>
+                <a href="/supervisor/produksipesanan" class="sidebar-link text-decoration-none px-3 <%-homeopen%>">
+                    <i class="bi bi-house-fill me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Home"></i>
+                    <span class="hide-on-collapse">Home</span>
+                </a>
+                <a onclick="menuarrowklik('transaksimenuarrow')" class="sidebar-link text-decoration-none px-3 <%-adminopen%><%-upstock%><%-forcestatusrequest%>">
+                    <i class="bi bi-box-seam-fill me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Transaksi"></i>
+                    <span class="hide-on-collapse">Tugas Saya</span>
+                    <i id="transaksimenuarrow" class="bi bi-caret-down-fill hide-on-collapse" style="float: right;"></i>
+                </a>
+                <div class="hide-on-collapse-detailmenu col" id="transaksimenuarrow-extend" style="display: none;">
+                    <div class="div-detailmenu <%-adminopen%> mb-3 d-flex align-items-center justify-content-between">
+                        <a href="/supervisor/produksipesanan" class="a-detailmenu">Approval Produk</a>  
+                        <a class="a-detailmenu-kanan" name="totaltugassayapesanan">(0)</a> 
+                    </div>
+                    
+                    <div class="div-detailmenu <%-upstock%> mb-3  d-flex align-items-center justify-content-between">
+                        <a href="/supervisor/produksistock" class="a-detailmenu">Approval Stock</a>  
+                        <a class="a-detailmenu-kanan" name="totaltugassayapesananstock">(0)</a> 
+                    </div>
+
+                    <div class="div-detailmenu <%-forcestatusrequest%> d-flex align-items-center justify-content-between">
+                        <a href="/supervisor/approvalforcestatus" class="a-detailmenu">Approval Forcestatus</a>  
+                        <a class="a-detailmenu-kanan" name="totaltugassayaforcestatus">(0)</a> 
+                    </div>
+                    <br>
+                </div>
+
+                <a href="/stock/produkupholstery" class="sidebar-link text-decoration-none px-3 <%=stockopen%>">
+                    <i class="bi bi-box-seam-fill me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Stock" ></i>
+                    <span class="hide-on-collapse">Stock Upholstery</span>
+                </a>
+
+                <a href="/supervisor/statuspesanan" class="sidebar-link text-decoration-none px-3 <%=pemantauan%>">
+                    <i class="bi bi-eye-fill me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Stock" ></i>
+                    <span class="hide-on-collapse">Pemantauan</span>
+                </a>
+
+                <a onclick="menuarrowklik('bankingmenuarrow')" class="sidebar-link text-decoration-none px-3 <%-bank%>">
+                    <i class="bi bi-bank2 me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Transaksi"></i>
+                    <span class="hide-on-collapse">Banking</span>
+                    <i id="bankingmenuarrow" class="bi bi-caret-down-fill hide-on-collapse" style="float: right;"></i>
+                </a>
+                <div class="hide-on-collapse-detailmenu col" id="bankingmenuarrow-extend" style="display: none;">
+                    <div class="div-detailmenu <%-banklimbo%> mb-3">
+                        <a href="/finance/banklimbo" class="a-detailmenu">Bank Limbo</a>  
+                       
+                    </div>
+                    
+                    <div class="div-detailmenu <%-bankinvestor%> mb-3">
+                        <a href="/finance/investor" class="a-detailmenu">Investor</a>  
+                       
+                    </div>
+                
+                    <br>
+                </div>
+
+                <a href="/editdatabase" class="sidebar-link text-decoration-none px-3 <%=editdatabase%>">
+                    <i class="bi bi-database-fill-add me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Stock" ></i>
+                    <span class="hide-on-collapse">Database</span>
+                </a>
+                <!-- <div class="hide-on-collapse-detailmenu col" id="transaksimenuarrow-extend" style="display: none;">
+                    
+                    <a href="/upholstery" class="a-detailmenu">Semua Pesanan</a>  
+                    <br>
+                  
+                    <br> 
+                </div> -->
+                
+                <!-- <a onclick="menuarrowklik('operatingmenuarrow')" class="sidebar-link text-decoration-none px-3">
+                    <i class="bi bi-patch-check-fill me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Operational p2.5"></i>
+                    <span class="hide-on-collapse" >Operational p2.5</span>
+                    <i id="operatingmenuarrow" class="bi bi-caret-down-fill hide-on-collapse" style="float: right;" ></i>
+                </a>
+                <div class="hide-on-collapse-detailmenu col" id="operatingmenuarrow-extend" style="display: none;">
+                    
+                    <a href="#" class="a-detailmenu">Drafting</a>  
+                    <br>
+                    <a href="#" class="a-detailmenu">Daftar Route</a>  
+                    <br>
+                    <br>
+                </div> -->
+                
+                <a onclick="menuarrowklik('formmenuarrow')" class="sidebar-link text-decoration-none px-3 <%=daftarrequest%>">
+                    <i class="bi bi-ui-checks me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Form"></i>
+                    <span class="hide-on-collapse">Form</span>
+                    <i id="formmenuarrow" class="bi bi-caret-down-fill hide-on-collapse" style="float: right;"></i>
+                </a>
+                <div class="hide-on-collapse-detailmenu col" id="formmenuarrow-extend" style="display: none;">
+                    <div class="div-detailmenu <%-requsetbeli%> mb-3">
+                        <a href="/procurement/daftarrequest" class="a-detailmenu">Request Pembelian</a>  
+                    
+                    </div>
+                
+                    <br>
+                </div>
+
+                <a href="/statistik" class="sidebar-link text-decoration-none px-3 <%-statistik%>">
+                    <i class="bi bi-graph-up-arrow me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Statistik" ></i>
+                    <span class="hide-on-collapse">Statistik</span>
+                </a>
+                
+                <a href="#" class="sidebar-link text-decoration-none px-3" onclick="warningunderbuild()">
+                    <i class="bi bi-speedometer2 me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Stock"></i>
+                    <span class="hide-on-collapse">Performa Saya (KPI)</span>
+                </a>
+                
+                <a onclick="menuarrowklik('settingmenuarrow')"  class="sidebar-link text-decoration-none px-3">
+                    <i class="bi bi-gear-fill me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Settings"></i>
+                    <span class="hide-on-collapse">Settings</span>
+                    <i id="settingmenuarrow" class="bi bi-caret-down-fill hide-on-collapse" style="float: right;" ></i>
+                </a>
+                <div class="hide-on-collapse-detailmenu col" id="settingmenuarrow-extend" style="display: none;">
+                    
+                    <a onclick="logout()" class="a-detailmenu">Logout</a>  
+                   
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+       
+
+       
+    </nav>
+

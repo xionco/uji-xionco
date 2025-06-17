@@ -1,0 +1,151 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 10, 2025 at 03:19 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `xioncodatabases`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `database_coa`
+--
+
+CREATE TABLE `database_coa` (
+  `no` int(11) NOT NULL,
+  `kode` text NOT NULL,
+  `keterangan` text NOT NULL,
+  `note` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `database_coa`
+--
+
+INSERT INTO `database_coa` (`no`, `kode`, `keterangan`, `note`) VALUES
+(1, '1000', 'CASH', ''),
+(2, '1010', 'BCA GAHARA | 49 888 44444', '4000'),
+(3, '1011', 'BCA GETA | 4980392860', '4000'),
+(4, '1012', 'BCA GAYAHIDUP | 5010744000', '4000'),
+(5, '1020', 'BCA QUINTENSSENSIAL', '4000'),
+(6, '1021', 'BCA OPERASIONAL JANSEN | 4980211695', ''),
+(7, '1022', '4980392859', ''),
+(8, '1130', 'MANDIRI GAHARA | 0700011851503', ''),
+(9, '1140', 'TOKOPEDIA GAHARA', ''),
+(10, '1150', '', ''),
+(11, '1160', 'BANK MANDIRI GAHARA | ', ''),
+(12, '1190', 'CROSS ACCOUNT', 'BERFUNGSI AGAR TIDAK DOUBLE PENCATATAN JIKA ADA PENGELUARAN DARI BANK KE KAS ATAU BANK LAIN (CROSSCEK)'),
+(13, '1200', 'ACCOUNT RECEIVABLE', 'CUSTOMER BELI PEMBAYARANNYA FULL TAPI TEMPO'),
+(14, '1210', 'SHAREHOLDER RECEIVABLE', ''),
+(15, '1220', 'EMPLOYEE RECEIVABLE', ''),
+(16, '1230', 'OTHER ACCOUNT RECEIVABLE', 'CONTOH : KELEBIHAN BAYAR PPH 21 KARYAWAN'),
+(17, '1300', 'PREPAID RENTAL', 'SEWA GEDUNG DLL'),
+(18, '1310', 'PREPAID INSURANCE', 'ASURANSI UNTUK 1 TAHUN'),
+(19, '1320', 'PREPAID EXPENSES', 'BIAYA PENGELUARAN DIMUKA'),
+(20, '1330', 'ADVANCED PAYMENT', 'DP PEMBELIAN KE VENDOR'),
+(21, '1340', 'PREPAID ADVERTISING', ''),
+(22, '1350', 'PREPAID TAXES', ''),
+(23, '1400', 'RAW MATERIALS INVENTORIES', ''),
+(24, '1410', 'WORK IN PROCESS INVENTORIES', ''),
+(25, '1420', 'FINISHED GOODS INVENTORIES', ''),
+(26, '1500', 'BUILDING', ''),
+(27, '1501', 'ACCUMULATED DEPRECIATION OF BUILDING', ''),
+(28, '1510', 'VEHICLE', ''),
+(29, '1511', 'ACCUMULATED DEPRECIATION OF VEHICLE', ''),
+(30, '1520', 'OFFICE EQUIPMENT', 'office equipment under 1 million noted into supplies expenses'),
+(31, '1521', 'ACCUMULATED DEPRECIATION OF OFFICE EQUIPMENT', ''),
+(32, '1530', 'MACHINARY', 'machinary under 1 million noted into supplies expenses'),
+(33, '1531', 'ACCUMULATED DEPRECIATION OF MACHINARY', ''),
+(34, '2001', 'ACCOUNT PAYABLES', 'HUTANG KE VENDOR/DAGANG'),
+(35, '2101', 'SHAREHOLDER PAYABLES', 'HUTANG KE PEMEGANG SAHAM'),
+(36, '2201', 'ADVANCE SALES', 'DP PENJUALAN OLEH CUSTOMER'),
+(37, '2301', 'SALARIES PAYABLES', 'HUTANG  PEMBAYARAN GAJI'),
+(38, '2401', 'ACCRUED EXPENSES', 'CONTOH : PENCATATAN HUTANG LISTRIK AIR TELP DI AKHIR TAHUN'),
+(39, '2501', 'TAXES PAYABLES', 'PPH BELUM TERBAYAR'),
+(40, '2601', 'VEHICLE LOAN', ''),
+(41, '2611', 'OFFICE EQUIPMENT LOAN', ''),
+(42, '2621', 'MACHINARY LOAN', ''),
+(43, '2701', 'BANK LOAN', ''),
+(44, '3000', 'CAPITAL STOCK', ''),
+(45, '3100', 'RETAINED EARNINGS', ''),
+(46, '3200', 'EARNING OF THE YEAR', ''),
+(47, '4000', 'SALES', ''),
+(48, '4010', 'SALES DISCOUNT', ''),
+(49, '5001', 'COST OF GOODS SOLD (COGS)', ''),
+(50, '5101', 'LABOR SALARIES EXPENSES', 'gaji karyawan pabrik berhubungan langsung dengan proses produksi'),
+(51, '5201', 'INCOMING FREIGHT & PACKING COST', 'Biaya ongkos kirim & packing pembelian barang (material)'),
+(52, '5301', 'INDIRECT LABOR SALARIES EXPENSES', 'gaji karyawan pabrik tp tidak berhubungan langsung dengan proses produksi contoh pengawas, satpam, ob'),
+(53, '5401', 'FACTORY & LAND RENTAL EXPENSES', ''),
+(54, '5501', 'FACTORY UTILITIES EXPENSES', 'AIR, LISTRIK, TELEPON, INTERNET CIRENDEU & JEPARA'),
+(55, '6001', 'MARKETPLACE COMMISSION EXPENSES', ''),
+(56, '6101', 'ADVERTISE AND PROMOTION EXPENSES', ''),
+(57, '6111', 'ENTERTAINTMENT EXPENSES', ''),
+(58, '6121', 'MEETING / TRAINING / SEMINAR EXPENSES', ''),
+(59, '6131', 'COMMUNICATION EXPENSES', ''),
+(60, '6141', 'SUPPLIES EXPENSES', 'contoh seragam safety, mesin & peralatan yang harganya dibawah 1jt'),
+(61, '6151', 'TRAVEL AND TRANSPORTATION EXPENSES', ''),
+(62, '6161', 'VEHICLE MAINTENANCE EXPENSES', ''),
+(63, '6171', 'MACHINARY MAINTENANCE EXPENSES', ''),
+(64, '6181', 'STORE RENTAL EXPENSES', ''),
+(65, '6191', 'STORE UTILITIES EXPENSES', 'AIR, LISTRIK, TELEPON, INTERNET CLASSY'),
+(66, '6192', 'FREIGHT & PACKING EXPENSES', 'Biaya ongkos kirim & packing pengiriman barang ke customer'),
+(67, '6201', 'ADMINISTRATION SALARIES EXPENSES', 'Gaji karyawan yang tidak berhubungan dengan proses produksi contoh admin, pm, procurement, finance, ob dikantor'),
+(68, '6211', 'OFFICE BUILDING RENTAL EXPENSES', ''),
+(69, '6221', 'OFFICE UTILITIES EXPENSES', 'AIR, LISTRIK, TELEPON, INTERNET GIA'),
+(70, '6231', 'BUILDING MAINTENANCE EXPENSES', ''),
+(71, '6241', 'OFFICE EQUIPMENT MAINTENANCE EXPENSES', ''),
+(72, '6251', 'HOUSEHOLD EXPENSES', ''),
+(73, '6261', 'POS & STATIONARY EXPENSES', ''),
+(74, '6271', 'LEGAL & ADMINISTRATION EXPENSES', ''),
+(75, '6281', 'INSURANCE EXPENSES', ''),
+(76, '6291', 'INTEREST LOAN EXPENSES', ''),
+(77, '6301', 'BUILDING DEPRECIATION EXPENSES', ''),
+(78, '6311', 'VEHICLE DEPRECIATION EXPENSES', ''),
+(79, '6321', 'OFFICE EQUIPMENT DEPRECIATION EXPENSES', ''),
+(80, '6331', 'MACHINARY DEPRECIATION EXPENSES', ''),
+(81, '6411', 'BANK ADMINISTRATION EXPENSES', ''),
+(82, '6511', 'OTHER EXPENSES', ''),
+(83, '7000', 'OTHER INCOME', 'penerimaan ongkir, packing & custom dari customer (extra charge)'),
+(84, '7100', 'INTEREST INCOME', ''),
+(85, '7200', 'INTEREST EXPENSES', '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `database_coa`
+--
+ALTER TABLE `database_coa`
+  ADD PRIMARY KEY (`no`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `database_coa`
+--
+ALTER TABLE `database_coa`
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

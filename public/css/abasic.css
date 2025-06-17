@@ -1,0 +1,309 @@
+#navatas-mobile {
+    display: none;
+    padding-top: 10px !important;
+    padding-top: 10px !important;
+    background-color: #DCDCDC !important;
+}
+
+#navbarbawah {
+    display: none;
+}
+
+#mobile-spase-nav {
+    display: none;
+}
+
+
+.bottom-bar-normal {
+    cursor: pointer;
+    border-radius: 15%;
+    text-align: center;
+}
+
+.bottom-bar-normal:hover {
+    background-color: bisque;
+}
+
+.bottom-bar-kliked {
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15%;
+    background-color: #3C3C3C;
+    color: white;
+}
+
+.bottom-bar-kliked:hover {
+    background-color: bisque;
+    color: #3C3C3C;
+}
+
+#akunatas-klik{
+    color: grey;
+    cursor: pointer;
+    
+}
+#akunatas-klik i{
+    font-size: x-large;
+    margin-right: 0.5em;
+}
+#akunatas-klik span{
+    font-size: large;
+    
+}
+
+.card.items{
+    border-radius: 15px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    margin-bottom: 10px!important;
+}
+/* .card.items:hover{
+    background-color: #69696980;
+    color: white;
+}
+.card.items:hover .rownama,.card.items:hover .roworderdate{
+    color: white;
+    font-weight: bold;
+} */
+.rownama,.roworderdate{
+    color: #777777!important;
+    font-weight: bold!important;
+}
+.rownamanobold{
+    color: #777777!important;
+}
+/* .card.items1{
+    border-radius: 15px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    margin-bottom: 10px!important;
+}
+.card.items1:hover{
+    background-color: #69696980;
+
+} */
+.card #header-card-item{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.589)!important;
+    padding-bottom: 8px!important;
+}
+
+#imgcards{
+    border-radius: 10px;
+}
+.imgcards{
+    border-radius: 10px;
+}
+
+.form-check-input{
+    border-color: blue;
+}
+#load-more-btn-icon:hover{
+    color: blue;
+}
+.selesaibutton:hover{
+    background-color: black!important;
+}
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(204, 204, 204)!important;
+    opacity: 1!important; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(204, 204, 204)!important;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(204, 204, 204)!important;
+}
+
+#filterstatus-select,#filterproduk-select,#filterplatform-select{
+    color: rgb(131, 131, 131)!important;
+}
+
+
+/*  */
+.timeline-container {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .timeline-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-text {
+    flex: 1;
+    /* font-size: 0.95rem;
+    color: #495057; */
+  }
+
+  .timeline-dot-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2px;
+    margin: 0 2rem;
+    position: relative;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #0dcaf0;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+  }
+
+  .timeline-dot::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 28px;
+    height: 28px;
+    background-color: rgba(13, 202, 240, 0.45);
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .timeline-dot-dis {
+    width: 12px;
+    height: 12px;
+    background-color: grey;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+  }
+
+  .timeline-dot-dis::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 28px;
+    height: 28px;
+    background-color: rgba(192, 192, 192, 0.5);
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .timeline-line {
+  position: absolute;
+    width: 2px;
+    height: 80px;
+    margin-top: 0.5rem;
+    background-image: linear-gradient(
+      to bottom,
+      #ced4da 33%,
+      rgba(255, 255, 255, 0) 0%
+    );
+    background-position: right;
+    background-size: 1px 10px;
+    background-repeat: repeat-y;
+    z-index: 1;
+  }
+/*  */
+
+.btn-custome-whites{
+    background-color: white;
+    color: #777777;
+    /* font-weight: bold; */
+    width: 100%;
+}
+.btn-custome-whites:hover{
+    background-color: rgba(217, 217, 217, 0.8);
+    
+}
+
+.btn-custome-noklik{
+    background-color: #e7e7e7;
+    color: white;
+    /* font-weight: bold; */
+    width: 100%;
+    border-color: #e7e7e7;
+}
+.btn-custome-noklik:hover{
+    background-color: #e7e7e7;
+    color: white;
+    
+}
+/*  */
+/* drag scroll */
+.drag-scroll {
+    overflow-x: auto;
+    cursor: grab;
+}
+.drag-scroll:active {
+    cursor: grabbing;
+    user-select: none; /* Mencegah select teks saat drag */
+}
+/* cara pakai */
+/* masukkan htlm tabel ke <div class="drag-scroll table-responsive" id="scrollArea"></> */
+/* copy script di bawah ini ke html page nya */
+/* <script>
+    // Drag scroll logic
+    const scrollArea = document.getElementById('scrollArea');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    scrollArea.addEventListener('mousedown', (e) => {
+      isDown = true;
+      scrollArea.classList.add('active');
+      startX = e.pageX - scrollArea.offsetLeft;
+      scrollLeft = scrollArea.scrollLeft;
+    });
+
+    scrollArea.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    scrollArea.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    scrollArea.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - scrollArea.offsetLeft;
+      const walk = (x - startX) * 1.5; // scroll speed
+      scrollArea.scrollLeft = scrollLeft - walk;
+    });
+  </script> */
+/*  */
+
+/*  */
+
+/*  */
+
+@media only screen and (max-width: 768px) {
+    #navatas-mobile {
+        display: inline;
+
+    }
+
+    #mobile-spase-nav {
+        display: block;
+    }
+
+    #navbarbawah {
+        display: block;
+    }
+
+   /*  #nav-atas {
+        display: none;
+    } */
+
+    #basepage {
+        padding-left: 5px;
+        padding-right: 5px;
+
+    }
+
+    .tableFixHead {
+        font-size: 16px !important;
+    }
+}
