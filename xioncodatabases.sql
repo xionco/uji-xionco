@@ -2568,38 +2568,7 @@ CREATE TABLE `dataslogin` (
 --
 
 INSERT INTO `dataslogin` (`no`, `username`, `password`, `pin`, `namalengkap`, `email`, `tipeuser`, `kantor`, `last_login`) VALUES
-(1, '999990', '123', '', 'Hammam Oktajianto', 'oktajianto99@gmail.com', 'Procurement', '', '09/06/2025 15:15:59'),
-(2, '505505', '123', '123', 'Marco Halim', 'xionco@halimintigroup.co.id', 'Admin C10', '', '09/06/2025 08:15:09'),
-(3, 'test@test.com', '123', '', 'test', 'packde@packde.com', 'Upholstery', '', '07/05/2025 16:25:17'),
-(4, '321120', '321120', '321120', 'Maria Felicita Nurindro', 'felicitahioe@gmail.com', 'Admin C5', 'Rempoa', '09/04/2025 08:23:39'),
-(5, '220510', '220510', '220510', 'Marfariza Achyar Sugadis', 'achyarmarfa@gmail.com', 'Admin Head', 'Rempoa', '15/05/2025 10:42:24'),
-(6, '220520', '220520', '220520', 'Devi Setiawati', 'devi23setiawati@gmail.com', 'Admin C10', 'Rempoa', ''),
-(7, '220710', '220710', '220710', 'Risti Utami', 'risutamiiiii@gmail.com', 'Admin C10', 'Rempoa', ''),
-(8, '321210', '321210', '321210', 'Ferry Putra Hermawan', 'poetraferry@gmail.com', 'Admin C10', 'Rempoa', ''),
-(9, '420710', '420710', '420710', 'Fitria Rahmadani', 'firahmaaa@gmail.com', 'Admin C10', 'Rempoa', '20/03/2025 16:01:41'),
-(10, '520220', '520220', '520220', 'Mujijah', '', 'Admin C10', 'Rempoa', ''),
-(11, '420810', '420810', '420810', 'Yuliadi', 'yulianto2573@gmail.com', 'Admin C10', 'Rempoa', ''),
-(12, '421030', '1234567890', '1234567890', 'Farid Al Rasyid', 'faridalrasyid10@gmail.com', 'Admin Classy', 'Classy', '07/05/2025 17:59:21'),
-(13, '7077090', 'Raga123456', 'Raga123456', 'Casga', '', 'Upholstery', '', '30/04/2025 13:28:13'),
-(14, '8088080', '8088080', '8088080', 'Nina', '', 'Upholstery', '', ''),
-(15, '421020', '421020', '421020', 'Harry Wijaya Harno', 'xioncoharry@gmail.com', 'Admin C10', 'Classy', '07/04/2025 17:41:36'),
-(16, '390110', 'Cahndeso2573', 'Cahndeso2573', 'Yulianto (Anto)', '', 'Pack-DE Staff', '', '26/04/2025 13:41:28'),
-(17, '310110', 'Jojobae123', 'Jojobae123', 'Darjono (Jono)', '', 'Driver', '', ''),
-(18, '220530', '220530', '220530', 'Suwarno', '', 'Pack-DE Staff', '', '26/04/2025 13:36:52'),
-(19, '220540', 'Bowo12', 'Bowo12', 'Muhamamad Falahuddin (Bowo)', '', 'Driver', '', ''),
-(20, '520210', '520210', '520210', 'Andika', '', 'Driver', '', '09/05/2025 15:33:07'),
-(21, '320310', 'Yoga1234', 'Yoga1234', 'Yoga Arian Thomas', '', 'Pack-DE Staff', '', ''),
-(22, '320710', 'W4hy03', 'W4hy03', 'Wahyu Wicaksono', '', 'Pack-DE Staff', '', ''),
-(23, '320910', 'Alpackde25', 'Alpackde25', 'Alhafiz Hidayah', '', 'Pack-DE Staff', '', ''),
-(24, '321110', 'Falahgeblek001', 'Falahgeblek001', 'Taufik Nur Hidayat', '', 'Pack-DE Staff', '', ''),
-(25, '421120', '421120', '421120', 'Tarmuji Cipto', '', 'Pack-DE Staff', '', ''),
-(26, '520320', '520320', '520320', 'Tri Aditya', '', 'Packde', '', ''),
-(27, '444010', '421020d', '421020d', 'DEFAULT - ADMIN C5', 'Admin C5', 'Admin C5', '', '08/05/2025 14:59:56'),
-(28, '444020', '421020d', '421020d', 'DEFAULT - ADMIN C10', 'Admin C10', 'Admin C10', '', ''),
-(29, '444030', '421020d', '421020d', 'DEFAULT - PACK-DE', 'Pack-DE Staff', 'Pack-DE Staff', '', ''),
-(30, '444040', '421020d', '421020d', 'DEFAULT - DRIVER', 'Driver', 'Driver', '', ''),
-(31, '444050', '421020d', '421020d', 'DEFAULT - ADMIN CLASSY', 'Admin Classy', 'Admin Classy', '', ''),
-(32, '111110', '123', '123', 'testing 123', '-', 'Supervisor', '', '17/06/2025 07:18:53');
+(1, '111110', '123', '123', 'testing 123', '-', 'Supervisor', '', '17/06/2025 07:18:53');
 
 -- --------------------------------------------------------
 
